@@ -1,0 +1,8 @@
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap:50px;
+}
+.filter-and-sort{
+    margin:20px;
+}

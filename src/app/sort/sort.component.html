@@ -1,0 +1,17 @@
+<!-- sort.component.html -->
+<!-- Add more sorting options as needed -->
+<!-- <label for="sort">Sort by:</label>
+<select id="sort" (change)="sortProducts($event)">
+  <option value="name">Name</option>
+  <option value="price">Price</option>
+</select> -->
+<div class="sort-container">
+  <label for="sort">Sort By:</label>
+  <select id="sort" (change)="sortProducts($event)">
+    <option value="none">Default</option>
+    <option value="nameAsc">Name (Ascending)</option>
+    <option value="nameDesc">Name (Descending)</option>
+    <option value="priceAsc">Price (Ascending)</option>
+    <option value="priceDesc">Price (Descending)</option>
+  </select>
+</div>

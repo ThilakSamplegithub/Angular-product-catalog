@@ -1,0 +1,13 @@
+<!-- product-list.component.html -->
+<!-- product-list.component.html -->
+<div class="filter-and-sort">
+  <app-filter (filterEvent)="filterByCategory($event)"></app-filter>
+  <app-sort (sortEvent)="sortProducts($event)"></app-sort>
+</div>
+<div class="product-list">
+  <app-product *ngFor="let product of filteredProducts" [product]="product"></app-product>
+</div>
+<!-- <div class="product-list">
+    <app-product *ngFor="let product of products" [product]="product"></app-product>
+  </div> -->
+  

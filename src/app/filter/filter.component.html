@@ -1,0 +1,8 @@
+<!-- filter.component.html -->
+<label for="category">Filter by Category:</label>
+<select id="category" (change)="filterProductsByCategory($event)">
+  <option value="">All</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Clothing">Clothing</option>
+  <!-- Add more categories as needed -->
+</select>
