@@ -9,7 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FilterComponent } from './filter/filter.component';
 import { SortComponent } from './sort/sort.component';
-// import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { SortComponent } from './sort/sort.component';
     FavoritesComponent,
     FilterComponent,
     SortComponent,
-    // AddToCartComponent
+    
   ],
   imports: [
     BrowserModule,

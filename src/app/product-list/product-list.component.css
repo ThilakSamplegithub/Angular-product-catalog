@@ -6,3 +6,9 @@
 .filter-and-sort{
     margin:20px;
 }
+.filter-and-sort a{
+    /* border: 1px solid red; */
+    position: absolute;
+    top:0;
+    right:5%
+}

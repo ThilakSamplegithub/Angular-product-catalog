@@ -1,13 +1,16 @@
 // product-list.component.ts
+// Import Router to navigate
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-
+import { Product } from '../product.model';
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = [
+  products: Product[] = [
     {
       id:1,
       name: 'Laptop',
@@ -56,7 +59,7 @@ export class ProductListComponent {
       category: 'Electronics',
       isFavorite: false,
       specifications: {
-        screenSize: '6.2 inches',
+        size: '6.2 inches',
         color: 'Black',
         storage: '128GB',
         camera: '20MP',
@@ -177,6 +180,19 @@ sortProducts(sortOrder: string) {
       // If 'Default' is selected, reset the sorting
       this.filteredProducts = [...this.products];
   }
+}
+constructor(private router: Router, private cartService: CartService) { }
+cartItems: Product[] = [];
+handleAddToCart(product: Product) {
+  // Add the product to the cart
+  this.cartService.addToCart(product);
+
+  // Navigate to the cart page
+  this.navigateToCart();
+}
+
+navigateToCart() {
+  this.router.navigate(['/cart']);
 }
 
 }

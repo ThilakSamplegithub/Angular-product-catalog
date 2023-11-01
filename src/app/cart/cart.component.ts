@@ -1,4 +1,8 @@
+// cart.component.ts
+
 import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-cart',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
+  cartItems: Product[] = [];
 
+  constructor(private cartService: CartService) {
+    this.cartItems = cartService.getCartItems();
+  }
 }
